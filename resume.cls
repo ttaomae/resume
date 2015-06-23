@@ -9,6 +9,13 @@
 \newcommand{\email}[1]{\def\@email{#1}}
 \newcommand{\phonenumber}[1]{\def\@phonenumber{#1}}
 
-\newcommand{\makeheader}{}
+\newcommand{\makeheader}{
+  \global\let\@name\@empty
+  \global\let\@email\@empty
+  \global\let\@phonenumber\@empty
+  \global\let\name\relax
+  \global\let\email\relax
+  \global\let\phonenumber\relax
+}
 
 \endinput
