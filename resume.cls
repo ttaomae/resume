@@ -11,6 +11,12 @@
 % no auxiliary files
 \nofiles
 
+% redefine \section to adjust spacing before and after
+\renewcommand\section{\@startsection{section}{1}{\z@}
+                                    {-1.5ex \@plus -.5ex \@minus -.2ex}
+                                    {1ex \@plus .1ex}
+                                    {\normalfont\Large\bfseries}}
+
 % no indent for entire document
 \setlength\parindent{\z@}
 % no spacing extra spacing for lists
