@@ -22,17 +22,17 @@
 
 % creates the header
 \newcommand{\makeheader}{
-  {\LARGE\textbf{\@name}} \\
-  {\large\@email \hfill \@phonenumber} \\
-  \hrule
+    {\LARGE\textbf{\@name}} \\
+    {\large\@email \hfill \@phonenumber} \\
+    \hrule
 
-  % clear
-  \global\let\@name\@empty
-  \global\let\@email\@empty
-  \global\let\@phonenumber\@empty
-  \global\let\name\relax
-  \global\let\email\relax
-  \global\let\phonenumber\relax
+    % clear
+    \global\let\@name\@empty
+    \global\let\@email\@empty
+    \global\let\@phonenumber\@empty
+    \global\let\name\relax
+    \global\let\email\relax
+    \global\let\phonenumber\relax
 }
 
 % define job keys
@@ -46,9 +46,9 @@
 % job environment
 \newenvironment{job}[1]
 {
-  \setkeys{job}{#1}
-  \textbf{\@jobtitle} \hfill \@jobstart - \@jobend \\
-  \@jobemployer
+    \setkeys{job}{#1}
+    \textbf{\@jobtitle} \hfill \@jobstart - \@jobend \\
+    \@jobemployer
 }
 {}
 
@@ -60,9 +60,9 @@
 % degree environment
 \newenvironment{degree}[1]
 {
-  \setkeys{degree}{#1}
-  \textbf{\@degreetitle} \hfill \@degreedate \\
-  \@degreeschool
+    \setkeys{degree}{#1}
+    \textbf{\@degreetitle} \hfill \@degreedate \\
+    \@degreeschool
 }
 {}
 
