@@ -2,7 +2,7 @@
 \ProvidesClass{resume}
 
 % use article as base class
-\LoadClass[10pt,letterpaper]{article}
+\LoadClass[12pt,letterpaper]{article}
 
 \RequirePackage{xkeyval}
 
