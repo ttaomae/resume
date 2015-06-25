@@ -2,10 +2,11 @@
 \ProvidesClass{resume}
 
 % use article as base class
-\LoadClass[10pt,letterpaper]{article}
-\RequirePackage{xkeyval}
+\LoadClass[12pt,letterpaper]{article}
 
 \RequirePackage{xkeyval}
+
+\RequirePackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
 
 % no auxiliary files
 \nofiles
@@ -38,6 +39,9 @@
 \newenvironment{job}[1]
 {
   \setkeys{job}{#1}
+  \noindent
+  \textbf{\@jobtitle} \hfill \@jobstart - \@jobend \\
+  \@jobemployer
 }
 {}
 
@@ -50,6 +54,9 @@
 \newenvironment{degree}[1]
 {
   \setkeys{degree}{#1}
+  \noindent
+  \textbf{\@degreetitle} \hfill \@degreedate \\
+  \@degreeschool
 }
 {}
 \endinput
