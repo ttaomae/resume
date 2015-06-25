@@ -13,6 +13,7 @@
 
 % no indent for entire document
 \setlength\parindent{\z@}
+% no spacing extra spacing for lists
 \setlist[itemize]{noitemsep, topsep=0pt}
 
 % commands for defining contact information used by \makeheader
