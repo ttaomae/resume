@@ -26,10 +26,10 @@
 }
 
 % define job keys
-\define@key{job}{title}{\def\@title{#1}}
-\define@key{job}{startdate}{\def\@startdate{#1}}
-\define@key{job}{enddate}{\def\@enddate{#1}}
-\define@key{job}{location}{\def\@location{#1}}
+\define@key{job}{title}{\def\@jobtitle{#1}}
+\define@key{job}{startdate}{\def\@jobstart{#1}}
+\define@key{job}{enddate}{\def\@jobend{#1}}
+\define@key{job}{employer}{\def\@jobemployer{#1}}
 % default for enddate = 'Present'
 \presetkeys{job}{enddate=Present}{}
 
@@ -37,6 +37,18 @@
 \newenvironment{job}[1]
 {
   \setkeys{job}{#1}
+}
+{}
+
+% define degree keys
+\define@key{degree}{title}{\def\@degreetitle{#1}}
+\define@key{degree}{school}{\def\@degreeschool{#1}}
+\define@key{degree}{date}{\def\@degreedate{#1}}
+
+% degree environment
+\newenvironment{degree}[1]
+{
+  \setkeys{degree}{#1}
 }
 {}
 \endinput
