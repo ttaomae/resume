@@ -1,6 +1,7 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{resume}
 \LoadClass[10pt,letterpaper]{article}
+\RequirePackage{xkeyval}
 
 % no auxiliary files
 \nofiles
@@ -18,4 +19,15 @@
   \global\let\phonenumber\relax
 }
 
+\define@key{job}{title}{\def\@title{#1}}
+\define@key{job}{startdate}{\def\@startdate{#1}}
+\define@key{job}{enddate}{\def\@enddate{#1}}
+\define@key{job}{location}{\def\@location{#1}}
+\presetkeys{job}{enddate=Present}{}
+
+\newenvironment{job}[1]
+{
+  \setkeys{job}{#1}
+}
+{}
 \endinput
