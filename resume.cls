@@ -21,6 +21,10 @@
 
 % creates the header
 \newcommand{\makeheader}{
+  {\LARGE\textbf{\@name}} \\
+  {\large\@email \hfill \@phonenumber} \\
+  \hrule
+
   % clear
   \global\let\@name\@empty
   \global\let\@email\@empty
