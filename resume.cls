@@ -11,6 +11,9 @@
 % no auxiliary files
 \nofiles
 
+% no indent for entire document
+\setlength\parindent{\z@}
+
 % commands for defining contact information used by \makeheader
 \newcommand{\name}[1]{\def\@name{#1}}
 \newcommand{\email}[1]{\def\@email{#1}}
@@ -18,6 +21,10 @@
 
 % creates the header
 \newcommand{\makeheader}{
+  {\LARGE\textbf{\@name}} \\
+  {\large\@email \hfill \@phonenumber} \\
+  \hrule
+
   % clear
   \global\let\@name\@empty
   \global\let\@email\@empty
@@ -39,7 +46,6 @@
 \newenvironment{job}[1]
 {
   \setkeys{job}{#1}
-  \noindent
   \textbf{\@jobtitle} \hfill \@jobstart - \@jobend \\
   \@jobemployer
 }
@@ -54,7 +60,6 @@
 \newenvironment{degree}[1]
 {
   \setkeys{degree}{#1}
-  \noindent
   \textbf{\@degreetitle} \hfill \@degreedate \\
   \@degreeschool
 }
