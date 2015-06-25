@@ -5,7 +5,7 @@
 \LoadClass[12pt,letterpaper]{article}
 
 \RequirePackage{xkeyval}
-
+\RequirePackage{enumitem}
 \RequirePackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
 
 % no auxiliary files
@@ -13,6 +13,7 @@
 
 % no indent for entire document
 \setlength\parindent{\z@}
+\setlist[itemize]{noitemsep, topsep=0pt}
 
 % commands for defining contact information used by \makeheader
 \newcommand{\name}[1]{\def\@name{#1}}
