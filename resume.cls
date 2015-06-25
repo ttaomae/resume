@@ -59,4 +59,7 @@
   \@degreeschool
 }
 {}
+
+% skill command
+\newcommand{\skill}[1]{\noindent\textbf{#1}}
 \endinput
