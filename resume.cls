@@ -44,7 +44,7 @@
 
 % define job keys
 \define@key{job}{title}{\def\@jobtitle{#1}}
-\define@key{job}{startdate}{\def\@jobstart{#1}}
+\define@key{job}{startdate}{\def\@jobstart/{#1}}
 \define@key{job}{enddate}{\def\@jobend{#1}}
 \define@key{job}{employer}{\def\@jobemployer{#1}}
 % default for enddate = 'Present'
@@ -54,7 +54,7 @@
 \newenvironment{job}[1]
 {
     \setkeys{job}{#1}
-    \textbf{\@jobtitle} \hfill \@jobstart - \@jobend \\
+    \textbf{\@jobtitle} \hfill \@jobstart/ - \@jobend \\
     \@jobemployer
 }
 {}
