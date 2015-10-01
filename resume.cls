@@ -2,7 +2,7 @@
 \ProvidesClass{resume}
 
 % use article as base class
-\LoadClass[12pt,letterpaper]{article}
+\LoadClass[11pt,letterpaper]{article}
 
 \RequirePackage{xkeyval}
 \RequirePackage{enumitem}
