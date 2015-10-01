@@ -49,6 +49,7 @@
 \define@key{job}{startdate}{\def\@jobstart/{#1}}
 \define@key{job}{enddate}{\def\@jobend{#1}}
 \define@key{job}{employer}{\def\@jobemployer{#1}}
+\define@key{job}{location}{\def\@joblocation{#1}}
 % default for enddate = 'Present'
 \presetkeys{job}{enddate=Present}{}
 
@@ -56,10 +57,13 @@
 \newenvironment{job}[1]
 {
     \setkeys{job}{#1}
-    \textbf{\@jobtitle} \hfill \@jobstart/ - \@jobend \\
-    \@jobemployer
+    \textbf{\@jobemployer} \hfill \@joblocation \\
+    \textsc{\@jobtitle} \hfill \@jobstart/ - \@jobend
+   % \@jobemployer
 }
-{}
+{
+  \smallskip
+}
 
 % define degree keys
 \define@key{degree}{title}{\def\@degreetitle{#1}}
@@ -73,7 +77,9 @@
     \textbf{\@degreetitle} \hfill \@degreedate \\
     \@degreeschool
 }
-{}
+{
+  \smallskip
+}
 
 % skill command
 \newcommand{\skill}[1]{\noindent\textbf{#1}}
