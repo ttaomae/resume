@@ -21,6 +21,8 @@
 \setlength\parindent{\z@}
 % no spacing extra spacing for lists
 \setlist[itemize]{noitemsep, topsep=0pt}
+% no page numbering
+\pagenumbering{gobble}
 
 % commands for defining contact information used by \makeheader
 \newcommand{\name}[1]{\def\@name{#1}}
