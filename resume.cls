@@ -6,7 +6,7 @@
 
 \RequirePackage{xkeyval}
 \RequirePackage{enumitem}
-\RequirePackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+\RequirePackage[top=0.75in, bottom=0.75in, left=1in, right=1in]{geometry}
 
 % no auxiliary files
 \nofiles
