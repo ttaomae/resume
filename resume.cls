@@ -57,8 +57,8 @@
 \newenvironment{job}[1]
 {
     \setkeys{job}{#1}
-    \textbf{\@jobemployer} \hfill \@joblocation \\
-    \textsc{\@jobtitle} \hfill \@jobstart/ - \@jobend
+    \textbf{\@jobemployer} \hfill \@jobstart/ - \@jobend \\ %\@joblocation \\
+    \textsc{\@jobtitle} \hfill 
    % \@jobemployer
 }
 {
