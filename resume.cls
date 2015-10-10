@@ -62,7 +62,7 @@
    % \@jobemployer
 }
 {
-  \smallskip
+    \smallskip
 }
 
 % define degree keys
@@ -78,7 +78,7 @@
     \@degreeschool
 }
 {
-  \smallskip
+    \smallskip
 }
 
 % skill command
