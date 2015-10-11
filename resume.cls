@@ -6,6 +6,7 @@
 
 \RequirePackage{xkeyval}
 \RequirePackage{enumitem}
+\RequirePackage{multicol}
 \RequirePackage[top=0.75in, bottom=0.75in, left=1in, right=1in]{geometry}
 
 % no auxiliary files
@@ -24,24 +25,26 @@
 % no page numbering
 \pagenumbering{gobble}
 
-% commands for defining contact information used by \makeheader
-\newcommand{\name}[1]{\def\@name{#1}}
-\newcommand{\email}[1]{\def\@email{#1}}
-\newcommand{\phonenumber}[1]{\def\@phonenumber{#1}}
+\define@key{header}{name}{\def\@headername{#1}}
+\define@key{header}{website}{\def\@headerwebsite{#1}}
+\define@key{header}{email}{\def\@headeremail{#1}}
+\define@key{header}{phonenumber}{\def\@headerphonenumber{#1}}
 
-% creates the header
-\newcommand{\makeheader}{
-    {\LARGE\textbf{\@name}} \\
-    {\large\@email \hfill \@phonenumber} \\
+\newenvironment{header}[1]
+{
+    \setkeys{header}{#1}
+    \begin{multicols}{2}
+        {\LARGE\textbf{\@headername}} \\
+        {\large\@headerwebsite}
+        \columnbreak
+
+        \hfill {\large\@headeremail}
+
+        \hfill {\large\@headerphonenumber}
+    \end{multicols}
+}
+{
     \hrule
-
-    % clear
-    \global\let\@name\@empty
-    \global\let\@email\@empty
-    \global\let\@phonenumber\@empty
-    \global\let\name\relax
-    \global\let\email\relax
-    \global\let\phonenumber\relax
 }
 
 % define job keys
