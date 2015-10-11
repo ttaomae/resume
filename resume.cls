@@ -9,6 +9,11 @@
 \RequirePackage{multicol}
 \RequirePackage[top=0.75in, bottom=0.75in, left=1in, right=1in]{geometry}
 
+% use Helvetica as font
+\RequirePackage[scaled]{helvet}
+\RequirePackage[T1]{fontenc}
+\renewcommand\familydefault{\sfdefault}
+
 % no auxiliary files
 \nofiles
 
