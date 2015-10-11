@@ -87,12 +87,20 @@
 % define project keys
 \define@key{project}{title}{\def\@projecttitle{#1}}
 \define@key{project}{link}{\def\@projectlink{#1}}
+% default for link = blank
+\presetkeys{project}{link=}{}
 
 % project environement
 \newenvironment{project}[1]
 {
     \setkeys{project}{#1}
-    \textbf{\@projecttitle}: \@projectlink
+    \textbf{\@projecttitle}
+    % if no link
+    \if&\@projectlink&
+        % nothing
+    \else
+        - \@projectlink
+    \fi
 }
 {
     \smallskip
