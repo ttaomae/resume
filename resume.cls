@@ -14,6 +14,9 @@
 \RequirePackage[T1]{fontenc}
 \renewcommand\familydefault{\sfdefault}
 
+% use ragged right to prevent hyphenation
+\raggedright
+
 % no auxiliary files
 \nofiles
 
