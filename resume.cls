@@ -78,8 +78,8 @@
     \setkeys{job}{#1}
     \begin{adjustwidth}{+0.5in}{+0in}
 
-    \textbf{\@jobemployer} \hfill \@jobstart/ - \@jobend \\ %\@joblocation \\
-    \textsc{\@jobtitle} \hfill 
+    \textbf{\@jobtitle} \hfill \@jobstart/ - \@jobend \\ %\@joblocation \\
+    \textsc{\@jobemployer \enspace \textendash \enspace \@joblocation} 
    % \@jobemployer
 }
 {
