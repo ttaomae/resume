@@ -42,17 +42,18 @@
 {
     \setkeys{header}{#1}
     \begin{multicols}{2}
-        {\LARGE\textbf{\@headername}} \\
+        {\huge\textbf{\@headername}} \\
         {\large\@headerwebsite}
         \columnbreak
 
-        \hfill {\large\@headeremail}
-
-        \hfill {\large\@headerphonenumber}
+        \begin{flushright}
+            \large\@headeremail \\
+            \large\@headerphonenumber
+        \end{flushright}
     \end{multicols}
 }
 {
-    \hrule
+    \hrule height 2pt
 }
 
 % define job keys
