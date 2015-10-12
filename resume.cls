@@ -92,6 +92,7 @@
 % define project keys
 \define@key{project}{title}{\def\@projecttitle{#1}}
 \define@key{project}{link}{\def\@projectlink{#1}}
+\define@key{project}{language}{\def\@projectlanguage{#1}}
 % default for link = blank
 \presetkeys{project}{link=}{}
 
@@ -106,6 +107,8 @@
     \else
         - \@projectlink
     \fi
+    
+    \textsc{\@projectlanguage}
 }
 {
     \smallskip
