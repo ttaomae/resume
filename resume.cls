@@ -7,6 +7,7 @@
 \RequirePackage{xkeyval}
 \RequirePackage{enumitem}
 \RequirePackage{multicol}
+\RequirePackage{xcolor}
 \RequirePackage[top=0.75in, bottom=0.75in, left=1in, right=1in]{geometry}
 
 % use Helvetica as font
@@ -24,7 +25,12 @@
 \renewcommand\section{\@startsection{section}{1}{\z@}
                                     {-1.5ex \@plus -.5ex \@minus -.2ex}
                                     {1ex \@plus .1ex}
-                                    {\normalfont\Large\bfseries}}
+                                    {}}
+
+% set style of section and add line under section title
+\RequirePackage{titlesec}
+\titleformat{\section}
+  {\normalfont\Large\bfseries}{}{1em}{}[{\titlerule[1pt]}]
 
 % no indent for entire document
 \setlength\parindent{\z@}
@@ -53,7 +59,7 @@
     \end{multicols}
 }
 {
-    \hrule height 2pt
+    \color{gray}\hrule height 5pt
 }
 
 % define job keys
