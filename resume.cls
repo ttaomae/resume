@@ -8,6 +8,7 @@
 \RequirePackage{enumitem}
 \RequirePackage{multicol}
 \RequirePackage{xcolor}
+\RequirePackage{changepage}
 \RequirePackage[top=0.75in, bottom=0.75in, left=1in, right=1in]{geometry}
 
 % use Helvetica as font
@@ -75,12 +76,14 @@
 \newenvironment{job}[1]
 {
     \setkeys{job}{#1}
+    \begin{adjustwidth}{+0.5in}{+0in}
+
     \textbf{\@jobemployer} \hfill \@jobstart/ - \@jobend \\ %\@joblocation \\
     \textsc{\@jobtitle} \hfill 
    % \@jobemployer
 }
 {
-    \smallskip
+    \end{adjustwidth}
 }
 
 % define degree keys
@@ -92,11 +95,13 @@
 \newenvironment{degree}[1]
 {
     \setkeys{degree}{#1}
+    \begin{adjustwidth}{+0.5in}{+0in}
+
     \textbf{\@degreetitle} \hfill \@degreedate \\
     \@degreeschool
 }
 {
-    \smallskip
+    \end{adjustwidth}
 }
 
 % define project keys
@@ -110,6 +115,8 @@
 \newenvironment{project}[1]
 {
     \setkeys{project}{#1}
+    \begin{adjustwidth}{+0.5in}{+0in}
+
     \textbf{\@projecttitle}
     % if no link
     \if&\@projectlink&
@@ -121,9 +128,19 @@
     \textsc{\@projectlanguage}
 }
 {
-    \smallskip
+    \end{adjustwidth}
 }
 
-% skill command
-\newcommand{\skill}[1]{\noindent\textbf{#1}}
+
+\define@key{skill}{title}{\def\@skilltitle{#1}}
+\newenvironment{skill}[1]
+{
+    \setkeys{skill}{#1}
+    \begin{adjustwidth}{+0.5in}{+0in}
+
+    \noindent\textbf{\@skilltitle}
+}
+{
+    \end{adjustwidth}
+}
 \endinput
