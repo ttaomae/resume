@@ -124,7 +124,7 @@
     \else
         - \@projectlink
     \fi
-    
+
     \textsc{\@projectlanguage}
 }
 {
