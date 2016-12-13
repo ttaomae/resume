@@ -78,9 +78,8 @@
     \setkeys{job}{#1}
     \begin{adjustwidth}{+0.5in}{+0in}
 
-    \textbf{\@jobtitle} \hfill \@jobstart/ - \@jobend \\ %\@joblocation \\
+    \textbf{\@jobtitle} \hfill \@jobstart/ - \@jobend \\
     \textsc{\@jobemployer \enspace \textendash \enspace \@joblocation} 
-   % \@jobemployer
 }
 {
     \end{adjustwidth}
@@ -98,7 +97,7 @@
     \begin{adjustwidth}{+0.5in}{+0in}
 
     \textbf{\@degreetitle} \hfill \@degreedate \\
-    \@degreeschool
+    \textsc{\@degreeschool}
 }
 {
     \end{adjustwidth}
