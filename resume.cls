@@ -41,9 +41,11 @@
 \pagenumbering{gobble}
 
 \define@key{header}{name}{\def\@headername{#1}}
-\define@key{header}{website}{\def\@headerwebsite{#1}}
 \define@key{header}{email}{\def\@headeremail{#1}}
 \define@key{header}{phonenumber}{\def\@headerphonenumber{#1}}
+\define@key{header}{website}{\def\@headerwebsite{#1}}
+% default for website = blank
+\presetkeys{header}{website=}{}
 
 \newenvironment{header}[1]
 {
