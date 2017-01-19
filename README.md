@@ -1,7 +1,7 @@
-# Résumé in LaTeX
-This project hosts my résumé, written in LaTeX. You can find a PDF version on the
+# RÃ©sumÃ© in LaTeX
+This project hosts my rÃ©sumÃ©, written in LaTeX. You can find a PDF version on the
 [releases page](https://github.com/ttaomae/resume/releases) or at
-[my github.io page](https://ttaomae.github.io/files/todd-taomae-resume.pdf)
+[my github.io page](https://ttaomae.github.io/files/todd-taomae-resume.pdf).
 
 ## resume.cls
 The class file provides a simple layout which attempts to be generic, but is slightly geared towards
