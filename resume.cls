@@ -71,6 +71,9 @@
 \define@key{job}{location}{\def\@joblocation{#1}}
 % default for enddate = 'Present'
 \presetkeys{job}{enddate=Present}{}
+% default for employer and location = blank
+\presetkeys{job}{employer=}{}
+\presetkeys{job}{location=}{}
 
 % job environment
 \newenvironment{job}[1]
@@ -79,7 +82,12 @@
     \begin{adjustwidth}{+0.5in}{+0in}
 
     \textbf{\@jobtitle} \hfill \@jobstart/ - \@jobend \\
-    \textsc{\@jobemployer \enspace \textendash \enspace \@joblocation} 
+    % if employer is not defined
+    \if&\@jobemployer&
+        % nothing
+    \else
+        \textsc{\@jobemployer \enspace \textendash \enspace \@joblocation}
+    \fi
 }
 {
     \end{adjustwidth}
